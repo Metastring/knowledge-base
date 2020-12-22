@@ -4,16 +4,17 @@ This is a set of best practices for development, deployment, etc.
 
 ## ssh
 
-* Use ed25519 keys because for ease of sharing public key
-* Setup `.ssh/config` to avoid entering username, hostname, identity file, etc
-* Keep a passphrase for your ssh key
+* Use [SSH keys](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/about-ssh) and avoid passwords.
+* Use ed25519 keys for ease of sharing public key (and also because it is strong).
+* Setup `.ssh/config` to avoid entering username, hostname, identity file, etc for ssh, rsync, scp, etc. [See example](https://gist.github.com/asdofindia/6ac769c1cee0459ba76db4b6b7d7962a)
+* Keep a passphrase for your ssh key. [Add one if you didn't set one](https://codybonney.com/adding-passphrase-to-an-existing-private-key/)
 
 ## git
 
 * Use [git feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow).
 * Use [semantic commit messages](https://seesparkbox.com/foundry/semantic_commit_messages)
-* Commit often
-* If your branch diverges from the target branch (usually `master` or `main`), use `git rebase -i target-branch` to rebase your changes on the target branch
+* [Commit Often, Perfect Later, Publish Once](https://sethrobertson.github.io/GitBestPractices/)
+* If your branch diverges from the target branch (usually `master` or `main`), use `git rebase -i target-branch` to rebase your changes on the target branch. [Read a real life example](https://github.com/zhukov/webogram/blob/master/CONTRIBUTING.md)
 
 ## Deployment
 
