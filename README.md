@@ -31,3 +31,26 @@ This is a set of best practices for development, deployment, etc.
 ### systemd
 
 * Use `~/.config/user/systemd` to setup user units and start them with `systemctl --user start unitname`. Why run services as root unnecessarily?
+
+## Development
+
+### General
+
+* Use meaningful names for variables, methods, files, and everything. As a corollary, do not use acronyms, single letters, etc.
+* Write code such that you won't have to add comments. Abstract complicated logic into a function and give it an intuitive name. Don't have surprises in functions. A function named `sum` should only do sum. Use comments to explain reasons outside of code. For example `// we've to do this first because of performance issues`
+* Don't mix concerns. Separate concerns. API/database calls should never be in the same file as UI/business logic code.
+
+### Java
+
+* Newer java versions are significantly more powerful than older Java versions. Use them. [This ain't your parents' Java](https://www.youtube.com/watch?v=hx5sloAYW-s)
+* [Modern web development in Java](https://asd.learnlearn.in/java-web/) has grown by leaps and bounds. Use JAX-RS, etc. Use frameworks like Spring/Quarkus/Micronaut where possible. [Here's a starter repository for jersey + weld](github.com/Metastring/jaxrs-starter)
+* Use [dependency injection and inversion of control](https://martinfowler.com/articles/injection.html).
+
+### React
+
+* Avoid using context. ([Official warning](https://reactjs.org/docs/context.html#before-you-use-context))
+* Use [custom hooks](https://reactjs.org/docs/hooks-custom.html) for encapsulating logic.
+* Keep your UI components clean of business logic.
+* Recommended libraries:
+  * [react-query](https://react-query.tanstack.com/) for network requests
+  * [chakra-ui](https://chakra-ui.com/) for UI components
