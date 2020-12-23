@@ -43,7 +43,7 @@ This is a set of best practices for development, deployment, etc.
 ### Java
 
 * Newer java versions are significantly more powerful than older Java versions. Use them. [This ain't your parents' Java](https://www.youtube.com/watch?v=hx5sloAYW-s)
-* [Modern web development in Java](https://asd.learnlearn.in/java-web/) has grown by leaps and bounds. Use JAX-RS, etc. Use frameworks like Spring/Quarkus/Micronaut where possible. [Here's a starter repository for jersey + weld](github.com/Metastring/jaxrs-starter)
+* [Modern web development in Java](https://asd.learnlearn.in/java-web/) has grown by leaps and bounds. Use JAX-RS, etc. Use frameworks like Spring/Quarkus/Micronaut where possible. [Here's a starter repository for jersey + weld](https://github.com/Metastring/jaxrs-starter)
 * Use [dependency injection and inversion of control](https://martinfowler.com/articles/injection.html).
 
 ### React
